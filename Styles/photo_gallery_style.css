@@ -1,0 +1,177 @@
+/*
+ * Notice: 
+ *   This is code is based on the following tutorial 
+ *   http://www.elated.com/articles/elegant-sliding-image-gallery-with-jquery/
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: "Georgia", serif;
+}
+
+
+/*
+  Container for the gallery:
+
+  Absolutely positioned
+  Stretch to fill the whole window width
+  Fixed height
+  Hide the overflow to prevent horizontal scrollbars
+
+  Vertically centred in the viewport: http://css-discuss.incutio.com/wiki/Centering_Block_Element#Centering_an_absolutely_positioned_element 
+*/
+
+#galleryContainer {
+  width: 100%;
+  height: 800px;        /* Image height + 200px */
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: 1;
+}
+
+
+/*
+  The gallery div that contains all the images
+
+  We'll set the width dynamically in the JavaScript as the images load
+*/
+
+#gallery {
+  width: 100px;
+  height: 700px;        /* Image height + 100px */
+  padding: 50px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+
+/*
+  Individual slides within the gallery:
+
+  Float them left so that they're all side by side
+  Fixed height (the width will vary as required)
+  Add some horizontal margin between the slides
+  Add a bottom fading reflection for WebKit browsers
+*/
+
+#gallery img {
+  float: left;
+  height: 600px;
+  margin: 0 100px;      /* Adjust the left/right margin to show greater or fewer slides at once */
+  -webkit-box-reflect:
+    below
+    0
+    -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(1, rgba(255, 255, 255, .5)),
+      color-stop(.8, rgba(255, 255, 255, 0))
+    );
+}
+
+
+/*
+  Left and right buttons:
+
+  Position them on the left and right sides of the gallery
+  Stretch them to the height of the gallery
+  Hide them by default
+*/
+
+#leftButton, #rightButton {
+  position: absolute;
+  z-index: 2;
+  top: -100px;
+  bottom: 0;
+  padding: 0;
+  margin: auto 0;
+  width: 15%;
+  height: 600px;        /* Image height */
+  border: none;
+  outline: none;
+  color: #fff;
+  background: transparent url(images/blank.gif);
+  font-size: 100px;
+  font-family: "Courier New", courier, fixed;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+#leftButton {
+  left: 0;
+}
+
+#rightButton {
+  right: 0;
+}
+
+/* (Turn off dotted black outline on FF3) */
+
+#leftButton::-moz-focus-inner, #rightButton::-moz-focus-inner {
+  border: none;
+}
+
+/*
+  Left and right button hover states:
+  Fade them in to 50% opacity
+*/
+
+#leftButton:hover, #rightButton:hover {
+  opacity: .5;
+  filter: alpha(opacity=50);
+  outline: none;
+}
+
+
+/*
+  Image caption:
+
+  Position just under the centre image
+  Hide by default
+*/
+
+#caption {
+  position: absolute;
+  z-index: 2;
+  bottom: 90px;
+  width: 100%;
+  color: #ffc;
+  text-align: center;
+  font-family: "Georgia", serif;
+  font-size: 24px;
+  letter-spacing: .1em;
+  display: none;
+}
+
+
+/*
+  Loading text:
+
+  Position in the centre of the gallery container
+  Hide by default
+*/
+
+#loading {
+  position: absolute;
+  z-index: 1;
+  bottom: 50%;
+  width: 100%;
+  color: #ffc;
+  text-align: center;
+  font-family: "Georgia", serif;
+  font-size: 36px;
+  letter-spacing: .1em;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
