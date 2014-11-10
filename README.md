@@ -5,11 +5,13 @@ This is a personal project where I intended to integrate different cloud storage
 
 ## Overview
 As already mentioned, there are actually three main features for this project: 
+
 1. Directly data uploading into the cloud service, so the data is not stored on your website server (burden reduced)
 2. Being able to keep track of information about where, what and who regarding one specific uploading
 3. Being able to conduct later usage (e.g., view an uploaded image) for the user
 
 What the current version supports are listed as follows:
+
 1. Support direct uploading to Amazon S3, Microsoft Azure Blob Storage
 2. Keep track of where and what did the website visitor uploaded
 3. Support image gallary, one could view all its uploaded image data in a slide show mode
