@@ -1,7 +1,7 @@
 html5-cloud-storage-direct-uploade
 ===================================
 
-This a personal project where I intended to integrate different cloud storage services into one place. Further more, it supports directly uploading data from the browser side into those cloud storage server to reduce the burden on the application server side (e.g., your website). Yet you are still able to keep track of those uploaded files for later useage (e.g., user A might want to retrieve file B sometime later). 
+This is a personal project where I intended to integrate different cloud storage services into one place. Further more, it supports directly uploading data from the browser side into those cloud storage server to reduce the burden on the application server side (e.g., your website). Yet you are still able to keep track of those uploaded files for later useage (e.g., user A might want to retrieve file B sometime later). 
 
 ## Overview
 As already mentioned, there are actually three main features for this project: 
@@ -17,7 +17,7 @@ What the current version supports are listed as follows:
 
 
 ## Techniques/Programming Languages involved 
-PHP, JavaScript, HTML5, MySQL, Cloud Storage Service (e.e., S3, Azure)
+PHP, JavaScript, HTML5, MySQL, Cloud Storage Service (e.g., S3, Azure)
 
 ## How to build and run the test
 
@@ -31,32 +31,41 @@ PHP, JavaScript, HTML5, MySQL, Cloud Storage Service (e.e., S3, Azure)
 
 some of the screenshots are:
 
-1. The index and the main page UI for the uploading:
+1) The index and the main page UI you first see for the uploading looks like the following:
 
 ![alt tag](https://github.com/yongminyan/html5-cloud-storage-direct-uploader/blob/master/screenshots.d/IndexPageFirstOpen.png)
 
-2. What the select file and preview image looks like after you click browse and select an image file:
+2) What the select file and preview image looks like after you click browse and select an image file:
 
 ![alt tag](https://github.com/yongminyan/html5-cloud-storage-direct-uploader/blob/master/screenshots.d/SelectPicAndPreview.png)
 
-3. After you click upload either to S3 or Azure, you could see a messge box on success:
-
-![alt tag](https://github.com/yongminyan/html5-cloud-storage-direct-uploader/blob/master/screenshots.d/Upload2AzureOnSuccess.png)
-![alt tag](https://github.com/yongminyan/html5-cloud-storage-direct-uploader/blob/master/screenshots.d/upload2S3OnSuccess.png)
-
-
-4. Then you could also check your cloud storage console to see whether the images are already there:
-
-![alt tag](https://github.com/yongminyan/html5-cloud-storage-direct-uploader/blob/master/screenshots.d/AzureConsoleAfterUpload.png)
-![alt tag](https://github.com/yongminyan/html5-cloud-storage-direct-uploader/blob/master/screenshots.d/S3ConsoleAfterUoload.png)
-
-5. User might want later usage say view his or her uploaded images, then you can click the link to view the images in slide mode in a separate page, you probably could see similar things as follows:
+3) After you click upload either to S3 or Azure, you could see a messge box on success:
 
 Azure:
 
+![alt tag](https://github.com/yongminyan/html5-cloud-storage-direct-uploader/blob/master/screenshots.d/Upload2AzureOnSuccess.png)
+
+S3:
+
+![alt tag](https://github.com/yongminyan/html5-cloud-storage-direct-uploader/blob/master/screenshots.d/upload2S3OnSuccess.png)
+
+4) Then you could also check your cloud storage console to see whether the images are already there:
+
+Azure, 3 images uploaded:
+
+![alt tag](https://github.com/yongminyan/html5-cloud-storage-direct-uploader/blob/master/screenshots.d/AzureConsoleAfterUpload.png)
+
+S3, 2 images uploaded:
+
+![alt tag](https://github.com/yongminyan/html5-cloud-storage-direct-uploader/blob/master/screenshots.d/S3ConsoleAfterUoload.png)
+
+5) User might want later usage say view his or her uploaded images, then you can click the link to view the images in slide mode in a separate page, you probably could see similar things as follows:
+
+Azure 3 Images:
+
 ![alt tag](https://github.com/yongminyan/html5-cloud-storage-direct-uploader/blob/master/screenshots.d/AzurePhotoGalaryPage.png)
 
-S3: 
+S3 2 Images: 
 ![alt tag](https://github.com/yongminyan/html5-cloud-storage-direct-uploader/blob/master/screenshots.d/S3PhotoGalary.png)
 
 
